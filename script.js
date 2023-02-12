@@ -11,13 +11,13 @@ function writePassword() {
   if (choice == false) {
     alert("Click the Generate Password Button Again");
   } else if (choice == true) {
-    var choiceChar = prompt("Choose how many characters you would like? Choose between 8-128");
+    var choiceLen = prompt("Choose how many characters you would like? Choose between 8-128");
     
     // Making sure that the user inputs choice of 8-128 characters
-    if (choiceChar < 8) {
+    if (choiceLen < 8) {
       alert('Not Enough Characters. Choose between 8 - 128');
       writePassword();
-    } else if (choiceChar > 129) {
+    } else if (choiceLen > 129) {
       alert('Too many Characters. Choose between 8 - 128');
       writePassword();
     }
@@ -25,11 +25,20 @@ function writePassword() {
   
   function generatePassword() {
     var emptyPass = []
-    randoomChar = Char[Math.floor(Math.random()*Char.length)];
-    randoomSpecChar = SpecialChar[Math.floor(Math.random()*SpecialChar.length)];
-    randoomNum = Num[Math.floor(Math.random()*Num.length)];
+    
+    // var choiceChar = prompt("Will you like to have Uppercase letters?")
 
-    return randoomChar
+    // if (choiceChar == true) {
+      
+    // }
+    randomChar = Char[Math.floor(Math.random()*Char.length)];
+    randomSpecChar = SpecialChar[Math.floor(Math.random()*SpecialChar.length)];
+    randomNum = Num[Math.floor(Math.random()*Num.length)];
+    
+    emptyPass.push(randomChar,randomSpecChar,randomNum);
+
+    return emptyPass.join("")
+    
     // for (let x = 0; x <= userChar; x++) {
       
       
