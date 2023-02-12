@@ -25,15 +25,25 @@ function writePassword() {
   
   function generatePassword() {
     var emptyPass = []
-    
-    // var choiceChar = prompt("Will you like to have Uppercase letters?")
+    var choiceChar = window.confirm("Will you like to have Uppercase letters?")
 
-    // if (choiceChar == true) {
+    for (x=0; x <= choiceLen; x++) {
+      randomChar = Char[Math.floor(Math.random()*Char.length)];
+      randomSpecChar = SpecialChar[Math.floor(Math.random()*SpecialChar.length)];
+      randomNum = Num[Math.floor(Math.random()*Num.length)];
+    
+      if (choiceChar == true) {
+        upperChar = randomChar.toUpperCase(0);
+        emptyPass.push(upperChar);
+      } else {
+        break;
+      }
+    }
+        
+    
       
-    // }
-    randomChar = Char[Math.floor(Math.random()*Char.length)];
-    randomSpecChar = SpecialChar[Math.floor(Math.random()*SpecialChar.length)];
-    randomNum = Num[Math.floor(Math.random()*Num.length)];
+    
+    
     
     emptyPass.push(randomChar,randomSpecChar,randomNum);
 
@@ -46,6 +56,8 @@ function writePassword() {
     // }
     
   }
+
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
