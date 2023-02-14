@@ -14,6 +14,8 @@ When you are on the website, clicking on the generate password button will gener
 
 Link to website: https://nephew20.github.io/Create-A-Random-Password/
 
+![website-screenshot!](/Create-A-Random-Password/Assets/Password-Generator-Screenshot.JPG "Password Generator")
+
 ## Credits
 
 No other creditors worked on this assignment. 
